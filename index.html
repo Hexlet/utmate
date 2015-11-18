@@ -1,0 +1,123 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>UTMate</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <script src="js/utmate.js"></script>
+        <script src="js/main.js"></script>
+
+    </head>
+    <body>
+
+      <div class="container">
+        <div class="row m-t-lg">
+          <div class="col-md-6 col-md-offset-3">
+
+            <!-- URL -->
+            <div class="card card-inverse card-info text-center m-b-lg">
+              <div class="card-block">
+                <form>
+                  <fieldset class="form-group m-b-0">
+                    <input type="text" class="form-control" id="initialUrl" placeholder="https://hexlet.io" onchange="buildUrl();">
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+            <!-- / URL -->
+
+            <!-- SOURCE -->
+            <form>
+              <fieldset class="form-group m-b-md">
+
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" class="utmSource" id="twitterRadioButton" value="twitter" onclick="handleRadioChange(this);"> twitter
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" class="utmSource" id="facebookRadioButton" value="facebook" onclick="handleRadioChange(this);"> facebook
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" class="utmSource" id="vkRadioButton" value="vk" onclick="handleRadioChange(this);"> vk
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" class="utmSource" id="google_plusRadioButton" value="google_plus" onclick="handleRadioChange(this);"> google_plus
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" class="utmSource" id="linkedInRadioButton" value="linkedin" onclick="handleRadioChange(this);"> linkedin
+                </label>
+                <br>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" class="utmSource" id="habrRadioButton" value="habr" onclick="handleRadioChange(this);"> habr
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" class="utmSource" id="d3RadioButton" value="d3" onclick="handleRadioChange(this);"> d3
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" class="utmSource" id="lepraRadioButton" value="lepra" onclick="handleRadioChange(this);"> lepra
+                </label>
+
+                <input type="text" class="form-control m-t" id="utmSource" placeholder="utm_source" onchange="buildUrl();">
+              </fieldset>
+
+            </form>
+            <!-- / SOURCE -->
+
+            <!-- MEDIUM -->
+            <form>
+              <fieldset class="form-group m-b-md">
+
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" class="utmMedium" id="socialRadioButton" value="social" onclick="handleRadioChange(this);"> social
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" class="utmMedium" id="blogRadioButton" value="blog" onclick="handleRadioChange(this);"> blog
+                </label>
+
+                <input type="text" class="form-control  m-t" id="utmMedium" placeholder="utm_medium" onchange="buildUrl();">
+              </fieldset>
+            </form>
+
+            <!-- CAMPAIGN -->
+            <p>
+              <small><a onClick="setCampaign('new_lessons');" href="#!">new_lessons</a>;</small>
+              <small><a onClick="setCampaign('new_course');" href="#!">new_course</a>;</small>
+              <small><a onClick="setCampaign('complete_course');" href="#!">complete_course</a>;</small>
+              <small><a onClick="setCampaign('complete_course');" href="#!">complete_course</a>;</small>
+              <small><a onClick="setCampaign('stack');" href="#!">stack</a>;</small>
+              <small><a onClick="setCampaign('translation');" href="#!">translation</a>;</small>
+            </p>
+            <form>
+              <fieldset class="form-group">
+                <input type="text" class="form-control" id="utmCampaign" placeholder="utm_campaign" onchange="buildUrl();">
+              </fieldset>
+
+            </form>
+            <!-- / CAMPAIGN -->
+
+            <!-- RESULT URL -->
+            <div class="card card-inverse card-success text-center m-t-lg">
+              <div class="card-block">
+                <form>
+                  <fieldset class="form-group m-b-0">
+                    <input type="text" class="form-control" id="resultUrl" placeholder="">
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+            <!-- /RESULT URL -->
+
+          </div>
+        </div>
+      </div>
+
+    </body>
+</html>
